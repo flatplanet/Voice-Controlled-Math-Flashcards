@@ -1,8 +1,8 @@
 Voice Controlled Math Flashcards
 ========================================================
-- Written with Ruby on Rails
+- Written in Ruby on Rails
 
-- Some Javascript
+- Uses Some Javascript For The Voice Controll Stuff
 
 John Elder ([JohnElder.org](http://JohnElder.org))
   
