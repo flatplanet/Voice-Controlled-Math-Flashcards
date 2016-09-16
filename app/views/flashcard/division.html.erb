@@ -8,18 +8,10 @@
 
 
 <br/><%= @result %>
-<br/><br/>
 
-<%= form_tag division_path, :method => 'POST' do %>
-    <%=label_tag 'Answer' %>
-    <%=text_field_tag 'answer'%>
-    <%= hidden_field_tag(:num1, @random1) %>
-    <%= hidden_field_tag(:num2, @random2) %>
-    
-    <%= submit_tag 'Submit' %>
-<% end %>
-<br/>
-<br/><%= @category %><br/>
+<%= render "flashcard/answer_form" %>
+
+<%= @category %><br/>
 <%= @item %>
 
 </center>

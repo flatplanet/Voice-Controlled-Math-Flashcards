@@ -9,22 +9,10 @@
 
 
 <br/><%= @result %>
-<br/><br/>
 
-<%= form_tag addition_path, :method => 'POST', id: 'labnol' do %>
-    <div class="speech">
-    <% @count += 1 %>
-    
-    <%= text_field_tag 'answer', nil, id: 'transcript', placeholder: 'Speak' %>
-    <%= hidden_field_tag(:num1, @random1) %>
-    <%= hidden_field_tag(:num2, @random2) %>
-    <%= hidden_field_tag(:count, @count) %>
-    
-    <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
-    </div>
-<% end %>
-<br/>
-<br/><%= @category %><br/>
+<%= render "flashcard/answer_form" %>
+
+<%= @category %><br/>
 <%= @item %>
 
 <!-- HTML5 Speech Recognition API -->
