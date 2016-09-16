@@ -6,14 +6,18 @@ class FlashcardController < ApplicationController
   
   def common_content
     #use before_filter to make this stuff available to all methods in the controller
+    
+    
     @random1 = rand(1..100)
     @random2 = rand(1..100)
-    @speech = "#{@random1} plus #{@random2}"
+    #@speech = "#{@random1} #{@sign} #{@random2}"
     @count = params[:count].to_i
     @hello = 'hello'
   end
   
   def index
+    @sign = "plus"
+    @speech = "#{@random1} #{@sign} #{@random2}"
     @farty = params['farty']
     @category = params['category']
     @item = params['item']
@@ -61,6 +65,8 @@ class FlashcardController < ApplicationController
   end
 
   def addition
+    @sign = "plus"
+    @speech = "#{@random1} #{@sign} #{@random2}"
     # Users Submitted Answer
     @answer = params[:answer].to_i
     
@@ -85,6 +91,8 @@ class FlashcardController < ApplicationController
   end
   
   def subtraction
+    @sign = "minus"
+    @speech = "#{@random1} #{@sign} #{@random2}"
     # Users Submitted Answer
     @answer = params[:answer].to_i
     
@@ -109,6 +117,8 @@ class FlashcardController < ApplicationController
   end
   
   def multiplication
+    @sign = "times"
+    @speech = "#{@random1} #{@sign} #{@random2}"
     # Users Submitted Answer
     @answer = params[:answer].to_i
     
@@ -133,6 +143,8 @@ class FlashcardController < ApplicationController
   end
   
   def division
+    @sign = "divided by"
+    @speech = "#{@random1} #{@sign} #{@random2}"
     # Users Submitted Answer
     @answer = params[:answer].to_i
     
