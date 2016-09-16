@@ -1,5 +1,8 @@
 class FlashcardController < ApplicationController
   before_action :common_content, :only => [:index, :addition, :subtraction, :multiplication, :division]
+
+  
+  
   
   def common_content
     #use before_filter to make this stuff available to all methods in the controller
