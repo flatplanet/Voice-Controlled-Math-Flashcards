@@ -144,6 +144,12 @@ class FlashcardController < ApplicationController
   
   def division
     @sign = "divided by"
+    
+    while @random2 > @random1 do
+      @random2 = rand(1..100)
+    end
+    
+    
     @speech = "#{@random1} #{@sign} #{@random2}"
     # Users Submitted Answer
     @answer = params[:answer].to_i
