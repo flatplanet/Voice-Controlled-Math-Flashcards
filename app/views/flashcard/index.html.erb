@@ -1,23 +1,26 @@
-<center>
-    <h1>Addition</h1>
-    <br/><br/>
-<h1><%= @random1 %> + <%= @random2 %> = ?</h1>
-<br/><br/>
 
+    <div class="row">
+        <div class="container">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Welcome To Math Flashcards!</h3>
+              </div>
+              <div class="panel-body">
+                  <div class="row">
+					<div class="col-md-8">
+                        <h3>Welcome to Math Flashcards!</h3>
+                        
+                        <p align="justify">Choose from Addition, Subtraction, Multiplication, and Division using the links above.
+                        
+                        The math problem will be spoken to you, and you can respond by speaking your answer, or typing it into the answer box and pressing the enter button on your keyboard.</p>
+                        
+                        <p>**To hear the questions and answer with your voice, you'll need speakers and a microphone.</p>
+                        
+                        <br/><br/>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
-<br/><%= @result %>
-<br/><br/>
-
-<%= form_tag root_path, :method => 'POST' do %>
-    <%=label_tag 'Answer' %>
-    <%=text_field_tag 'answer'%>
-    <%= hidden_field_tag(:num1, @random1) %>
-    <%= hidden_field_tag(:num2, @random2) %>
-    
-    <%= submit_tag 'Submit' %>
-<% end %>
-<br/>
-<br/><%= @category %><br/>
-<%= @item %>
-
-</center>
